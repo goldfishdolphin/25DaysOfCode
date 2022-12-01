@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "AnytimeMarketplace",
-    "slug": "AnytimeMarketplace",
+    "slug": "anytime-marketplace",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -18,16 +18,24 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.naureenimran.anytimemarketplace"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.naureenimran.anytimemarketplace"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "2a151b73-cf00-4cb7-b349-9db3485a63c3"
+      }
+    },
+    "owner": "naureenimran"
   }
 }
