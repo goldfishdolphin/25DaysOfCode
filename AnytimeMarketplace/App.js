@@ -1,16 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, Image } from 'react-native';
 
 export default function App() {
   let x = 1;
+
   console.log("App executed");
 
-  // x.toString();
   return (
-    <View style={styles.container}>
-      <Text>Hello React Native!</Text>
+    <SafeAreaView style={styles.container}>
+      <Text>Anytime Marketplace</Text>
+      <Image source={require('./assets/logo.png')} />
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -19,6 +20,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+
   },
 });
