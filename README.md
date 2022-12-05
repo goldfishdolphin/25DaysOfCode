@@ -6,3 +6,4 @@ It is a WWC 25 Days of Code Challenge repo.
 Designed the app logo in [Canva](https://www.canva.com/design/DAFTnGJjNoI/IWMC4WBLfuSXlb8Tb2aHKQ/view?utm_content=DAFTnGJjNoI&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink) and added to the app.
 * Day 3 Solved HackerRank problem min-maxSum.
 * Day 4 Solved HackerRank problem birthdayCakeCandles.
+* Day 5 Got data from an [api](https://fakestoreapi.com/products/) using a libray called apisauce and rendered it on the app.
