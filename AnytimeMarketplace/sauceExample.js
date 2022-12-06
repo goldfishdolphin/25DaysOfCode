@@ -23,7 +23,7 @@ export default function SauceExample() {
         return (
             <Box px={5} py={2} rounded="md" my={2}>
                 {item.title}
-                <Text>price: {item.price}</Text>
+                <Text>price: £{item.price}</Text>
                 <Image
                     source={{ uri: item.image }}
                     style={{ width: 100, height: 100 }}

@@ -1,5 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, SafeAreaView, Image } from 'react-native';
+import MainContainer from './navigation/MainContainer';
 import SauceExample from './sauceExample';
 export default function App() {
   let x = 1;
@@ -10,12 +10,11 @@ export default function App() {
   return (
 
     <SafeAreaView style={styles.container}>
-      <Text>hello</Text>
-      <Image source={require('./assets/logo.png')} />
-      <StatusBar style="auto" />
-      <View>
-        <SauceExample />
+      <View style={styles.logoContainer}>
+        <Image source={require('./assets/logo.png')} />
       </View>
+
+      <MainContainer />
     </SafeAreaView>
 
 
@@ -27,4 +26,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
   },
+  logoContainer: {
+    alignContent: 'centre',
+    alignItems: 'top',
+    height: 10,
+    width: 50
+  }
 });
