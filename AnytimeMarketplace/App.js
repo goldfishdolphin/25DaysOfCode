@@ -1,21 +1,23 @@
+import * as React from 'react';
 import { StyleSheet, Text, View, SafeAreaView, Image } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import HomeScreen from './navigation/screens/HomeScreen';
+import ProfileScreen from './navigation/screens/ProfileScreen';
 import MainContainer from './navigation/MainContainer';
-import SauceExample from './sauceExample';
+
+const Stack = createNativeStackNavigator();
 export default function App() {
   let x = 1;
 
   console.log("App executed");
 
-
   return (
 
-    <SafeAreaView style={styles.container}>
-      <View style={styles.logoContainer}>
-        <Image source={require('./assets/logo.png')} />
-      </View>
 
+    <NavigationContainer>
       <MainContainer />
-    </SafeAreaView>
+    </NavigationContainer>
 
 
   );

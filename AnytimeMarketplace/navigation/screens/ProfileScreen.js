@@ -1,15 +1,10 @@
 import * as React from 'react';
 import { View, Text } from 'react-native';
 
-function ProfileScreen(navigation) {
+function ProfileScreen({ navigation, route }) {
     return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text
-                onPress={() => navigation.navigate('Home')}
-                style={{ fontSize: 20, fontWeight: 'bold' }}> Profile Screen
-            </Text>
+        <Text>This is {route.params.name}'s profile</Text>
 
-        </View>
     );
 }
 

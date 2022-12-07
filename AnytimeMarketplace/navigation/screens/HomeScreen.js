@@ -1,16 +1,12 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Button } from 'react-native';
 
-function HomeScreen(navigation) {
+function HomeScreen({ navigation }) {
     return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text
-                onPress={() => alert('This is Home screen')}
-                style={{ fontSize: 20, fontWeight: 'bold' }}> Home Screen
-            </Text>
-
-        </View>
+        <Button
+            title='Go to profile'
+            onPress={() => navigation.navigate('Profile', { name: 'Jane' })}
+        />
     );
 }
-
 export default HomeScreen;
