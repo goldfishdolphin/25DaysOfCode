@@ -8,3 +8,4 @@ Designed the app logo in [Canva](https://www.canva.com/design/DAFTnGJjNoI/IWMC4W
 * Day 4 Solved HackerRank problem birthdayCakeCandles.
 * Day 5 Got data from an [api](https://fakestoreapi.com/products/) using a libray called apisauce and rendered it on the app.
 Day 6 Worked on Nav bar
+Day 7 Learnt how to switch between screens in react native app.
