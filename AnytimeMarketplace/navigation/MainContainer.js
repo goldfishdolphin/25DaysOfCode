@@ -13,7 +13,7 @@ function MainContainer() {
     return (
         <Tab.Navigator
             screenOptions={({ route }) => ({
-                tabBarICon: ({ focused, color, size }) => {
+                tabBarIcon: ({ focused, color, size }) => {
                     let iconName;
                     if (route.name === 'Home') {
                         iconName = focused ? 'home' : 'home-outline';
@@ -23,11 +23,12 @@ function MainContainer() {
                         iconName = focused ? 'pricetag' : 'pricetag-outline';
                     } else if (route.name === 'Details') {
                         iconName = focused ? 'list' : 'list-outline';
+                    } else if (route.name) {
+                        iconName = focused ? 'cart' : 'cart-outline';
                     }
-                    console.log(iconName);
                     return <Ionicons name={iconName} color={color} size={size} />;
                 },
-                tabBarActiveTintColor: 'tomato',
+                tabBarActiveTintColor: 'blue',
                 tabBarInactiveTintColor: 'grey'
 
             })}

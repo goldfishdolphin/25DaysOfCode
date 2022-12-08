@@ -3,7 +3,10 @@ import { View, Text } from 'react-native';
 
 function ProfileScreen({ navigation, route }) {
     return (
-        <Text>This is {route.params.name}'s profile</Text>
+        <View>
+            <Text>hello</Text>
+            <Text>This is {route.params.name}'s profile</Text>
+        </View>
 
     );
 }
