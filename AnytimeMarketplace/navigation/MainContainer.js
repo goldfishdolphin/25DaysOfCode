@@ -3,16 +3,40 @@ import DetailsScreen from './screens/DetailsScreen';
 import HomeScreen from './screens/HomeScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import CartScreen from './screens/CartScreen';
+import SellScreen from './screens/SellScreen';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+
 
 
 const Tab = createBottomTabNavigator();
 function MainContainer() {
     return (
-        <Tab.Navigator>
+        <Tab.Navigator
+            screenOptions={({ route }) => ({
+                tabBarICon: ({ focused, color, size }) => {
+                    let iconName;
+                    if (route.name === 'Home') {
+                        iconName = focused ? 'home' : 'home-outline';
+                    } else if (route.name === 'Profile') {
+                        iconName = focused ? 'person' : 'person-outline';
+                    } else if (route.name === 'Sell') {
+                        iconName = focused ? 'pricetag' : 'pricetag-outline';
+                    } else if (route.name === 'Details') {
+                        iconName = focused ? 'list' : 'list-outline';
+                    }
+                    console.log(iconName);
+                    return <Ionicons name={iconName} color={color} size={size} />;
+                },
+                tabBarActiveTintColor: 'tomato',
+                tabBarInactiveTintColor: 'grey'
+
+            })}
+        >
             <Tab.Screen name="Home" component={HomeScreen} />
             <Tab.Screen name="Profile" component={ProfileScreen} />
             <Tab.Screen name="Details" component={DetailsScreen} />
             <Tab.Screen name='Cart' component={CartScreen} />
+            <Tab.Screen name='Sell' component={SellScreen} />
 
         </Tab.Navigator>
     );
