@@ -6,7 +6,7 @@ import { create } from "apisauce";
 import { useState } from "react";
 import { Image } from "react-native";
 
-export default function SauceExample() {
+export default function ProductList() {
     const [data, setData] = useState([]);
     const api = create({
         baseURL: "https://fakestoreapi.com/products",
