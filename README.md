@@ -10,3 +10,4 @@ Designed the app logo in [Canva](https://www.canva.com/design/DAFTnGJjNoI/IWMC4W
 * Day 6 Worked on Nav bar
 * Day 7 Learnt how to switch between screens in react native app.
 * Day 8 Added Icons to the bottom Nav Tab. Icon is blue for active screen but grey for inactive screen.
+* Day 9 Made a user story map for the app and drew it on a paper. Also tried to figure out how to use params in react native by reading react native docs.
