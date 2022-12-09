@@ -1,13 +1,16 @@
-import { FlatList, Box, NativeBaseProvider, Center } from "native-base";
+import { FlatList, Box, NativeBaseProvider, View, Center, Button } from "native-base";
 import { Text } from "native-base";
 import React from "react";
 import { useEffect } from "react";
 import { create } from "apisauce";
 import { useState } from "react";
 import { Image } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 export default function ProductList() {
+    const navigation = useNavigation();
     const [data, setData] = useState([]);
+
     const api = create({
         baseURL: "https://fakestoreapi.com/products",
     });
@@ -28,7 +31,14 @@ export default function ProductList() {
                     source={{ uri: item.image }}
                     style={{ width: 100, height: 100 }}
                 />
-                {item.rate}
+                <Button
+                    title='View'
+                    onPress={() => {
+                        navigation.navigate('ProductDetail', {
+                            id: 9
+                        });
+                    }}
+                />
             </Box>
         );
     };
@@ -40,13 +50,16 @@ export default function ProductList() {
     return (
         <NativeBaseProvider>
             <Center flex={1}>
-                <Box> Items for Sale</Box>
                 {data && (
-                    <FlatList
-                        data={data}
-                        renderItem={renderItem}
-                        keyExtractor={(item) => item.id.toString()}
-                    />
+                    <View>
+                        <FlatList
+                            data={data}
+                            renderItem={renderItem}
+                            keyExtractor={(item) => item.id.toString()}
+                        />
+
+
+                    </View>
                 )}
             </Center>
         </NativeBaseProvider>
