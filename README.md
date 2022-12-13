@@ -14,3 +14,4 @@ Designed the app logo in [Canva](https://www.canva.com/design/DAFTnGJjNoI/IWMC4W
 * Day 10 solve time conversion problem at hacker rank.
 * Day 11 Researched and read Docs about React Native Stack Navigation.
 * Day 12 Learnt about nested stack navigation.
+* Day 13 Experimented with NativeBase and Check the docs for making different componenets.
