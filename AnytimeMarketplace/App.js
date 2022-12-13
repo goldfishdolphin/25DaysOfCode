@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { StyleSheet, Text, View, SafeAreaView, Image } from 'react-native';
+import { StyleSheet, View, SafeAreaView, Image } from 'react-native';
+import { NativeBaseProvider, Text, Box } from "native-base";
 import { NavigationContainer } from '@react-navigation/native';
 import MainContainer from './navigation/MainContainer';
 
@@ -9,11 +10,13 @@ export default function App() {
   console.log("App executed");
 
   return (
+    <NativeBaseProvider>
+      <NavigationContainer>
+        <MainContainer />
+      </NavigationContainer>
 
+    </NativeBaseProvider>
 
-    <NavigationContainer>
-      <MainContainer />
-    </NavigationContainer>
   );
 }
 const styles = StyleSheet.create({

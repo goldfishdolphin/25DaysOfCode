@@ -11,13 +11,15 @@ export default function ProductList() {
     const navigation = useNavigation();
     const [data, setData] = useState([]);
 
-    const api = create({
-        baseURL: "https://fakestoreapi.com/products",
-    });
 
+    const api = create({
+        baseURL: 'https://fakestoreapi.com/products',
+    });
+    ;
     const fetchData = () => {
+
         api
-            .get("")
+            .get('')
             .then((response) => response.data)
             .then((data) => setData(data));
     };
@@ -30,14 +32,6 @@ export default function ProductList() {
                 <Image
                     source={{ uri: item.image }}
                     style={{ width: 100, height: 100 }}
-                />
-                <Button
-                    title='View'
-                    onPress={() => {
-                        navigation.navigate('ProductDetail', {
-                            id: 9
-                        });
-                    }}
                 />
             </Box>
         );
@@ -52,6 +46,7 @@ export default function ProductList() {
             <Center flex={1}>
                 {data && (
                     <View>
+
                         <FlatList
                             data={data}
                             renderItem={renderItem}
