@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, Button, SafeAreaView, Image, Linking } from 'react-native';
-import ResponsiveUI from './components/ResponsiveUI';
-// import { NativeBaseProvider, Text, Box } from "native-base";
-// import { NavigationContainer } from '@react-navigation/native';
-// import MainContainer from './navigation/MainContainer';
-
+import ScrollVPractice from './components/ScrollVPractice';
 
 export default function App() {
   let x = 1;
@@ -15,7 +11,7 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <ResponsiveUI />
+      <ScrollVPractice />
     </SafeAreaView>
 
   );
@@ -25,8 +21,6 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     backgroundColor: 'lightblue',
-    alignItems: 'flex-start',
-    justifyContent: 'center',
   },
 })
 
