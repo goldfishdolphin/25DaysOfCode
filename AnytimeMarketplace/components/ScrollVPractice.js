@@ -47,9 +47,10 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
     },
     item: {
-        flex: 1,
+        margin: 10,
         backgroundColor: 'yellow',
-        alignItems: 'center'
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     text: {
         color: 'brown',

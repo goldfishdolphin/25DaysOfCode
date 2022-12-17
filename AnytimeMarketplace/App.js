@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { StyleSheet, View, Text, Button, SafeAreaView, Image, Linking } from 'react-native';
+import React from 'react';
+import { StyleSheet, SafeAreaView, } from 'react-native';
+import FlatlistPractice from './components/FlatlistPractice';
 import ScrollVPractice from './components/ScrollVPractice';
 
 export default function App() {
@@ -7,11 +8,9 @@ export default function App() {
 
   console.log("App executed");
 
-
-
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollVPractice />
+      <FlatlistPractice />
     </SafeAreaView>
 
   );
