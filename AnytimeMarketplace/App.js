@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import { StyleSheet, View, Text, Button, SafeAreaView, Image, Linking } from 'react-native';
+import React from 'react';
+import { StyleSheet, SafeAreaView, } from 'react-native';
+import FlatlistPractice from './components/FlatlistPractice';
 import ScrollVPractice from './components/ScrollVPractice';
+import Sectionlist from './components/Sectionlist';
 
 export default function App() {
   let x = 1;
 
   console.log("App executed");
 
-
-
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollVPractice />
+      <Sectionlist />
     </SafeAreaView>
 
   );
