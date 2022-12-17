@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FlatList, View, StyleSheet, Text } from "react-native";
+import { FlatList, View, StyleSheet, Text, RefreshControl } from "react-native";
 
 function FlatlistPractice() {
     const [items, setItems] = useState([
@@ -19,13 +19,12 @@ function FlatlistPractice() {
     const [refreshing, setRefreshing] = useState(false);
     const onRefresh = () => {
         setRefreshing(true);
-        setItems([...items, { key: 90, item: 'item9' }]);
+        setItems([...items, { key: '202', name: 'item99' }]);
         setRefreshing(false);
     };
     return (
 
         <FlatList style={styles.body}
-
             keyExtractor={(item, index) => index.toString()}
             data={items}
             renderItem={({ item }) => (
@@ -33,6 +32,11 @@ function FlatlistPractice() {
                     <Text style={styles.text}>{item.name}</Text>
                 </View>
             )}
+            refreshControl={<RefreshControl
+                refreshing={refreshing}
+                onRefresh={onRefresh}
+                color={'white'}
+            />}
         />
 
     );

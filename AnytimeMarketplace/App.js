@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, SafeAreaView, } from 'react-native';
 import FlatlistPractice from './components/FlatlistPractice';
 import ScrollVPractice from './components/ScrollVPractice';
+import Sectionlist from './components/Sectionlist';
 
 export default function App() {
   let x = 1;
@@ -10,7 +11,7 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <FlatlistPractice />
+      <Sectionlist />
     </SafeAreaView>
 
   );
