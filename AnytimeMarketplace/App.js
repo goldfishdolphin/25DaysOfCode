@@ -4,6 +4,7 @@ import FlatlistPractice from './components/FlatlistPractice';
 import PracticeSectionList from './components/practiceSectionList';
 import ScrollVPractice from './components/ScrollVPractice';
 import Sectionlist from './components/Sectionlist';
+import TextInputPractice from './components/TextInputPractice';
 
 export default function App() {
   let x = 1;
@@ -12,7 +13,7 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <PracticeSectionList />
+      <TextInputPractice />
     </SafeAreaView>
 
   );
