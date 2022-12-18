@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, SafeAreaView, } from 'react-native';
 import FlatlistPractice from './components/FlatlistPractice';
+import PracticeSectionList from './components/practiceSectionList';
 import ScrollVPractice from './components/ScrollVPractice';
 import Sectionlist from './components/Sectionlist';
 
@@ -11,7 +12,7 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Sectionlist />
+      <PracticeSectionList />
     </SafeAreaView>
 
   );

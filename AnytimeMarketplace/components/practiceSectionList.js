@@ -1,23 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, StyleSheet, Text, SectionList } from "react-native";
 
-function Sectionlist() {
+function PracticeSectionList() {
+    const [number, setNumber] = useState(1);
     const DATA = [
-
         {
-            title: 'Biscuits',
-            data: ['custard cream', 'oreo', 'chocolate-chip']
-        },
-        {
-            title: 'Ice-cream',
-            data: ['vanilla', 'strawberry', 'mint', 'raspberry']
-        },
-        {
-            title: 'soft drinks',
-            data: ['pepsi', 'sprite', 'fanta']
+            title: `Title ${number}`,
+            data: [`Item ${number}`]
         }
     ];
-
     return (
         <SectionList
             style={styles.body}
@@ -34,6 +25,7 @@ function Sectionlist() {
                 </View>
             )}
         />
+
     );
 }
 const styles = StyleSheet.create({
@@ -56,5 +48,4 @@ const styles = StyleSheet.create({
         ,
     }
 });
-
-export default Sectionlist;
+export default PracticeSectionList;
