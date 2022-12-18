@@ -19,3 +19,4 @@ Designed the app logo in [Canva](https://www.canva.com/design/DAFTnGJjNoI/IWMC4W
 * Day 15 Practiced Responsive UI with flex in react native app.
 * Day 16 Practiced List, ScrollView & RefreshControl in a react native app.
 * Day 17 Practiced Flat list and Section List in a react native app.
+* Day 18 Exercised Section List and practiced Input text.
