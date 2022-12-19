@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Text, View, StyleSheet, SafeAreaView, TextInput, Button, Touchable, TouchableOpacity } from "react-native";
+import { Text, View, StyleSheet, SafeAreaView, TextInput, Button, Touchable, TouchableOpacity, TouchableHighlight } from "react-native";
 function TextInputPractice() {
 
     const [name, setName] = useState('');
@@ -16,15 +16,16 @@ function TextInputPractice() {
                 onChangeText={(value) => setName(value)}
                 placeholder='e.g Tom'
             />
-            <TouchableOpacity
+            <TouchableHighlight
                 onPress={onPressHandler}
                 style={styles.button}
                 activeOpacity={0.5}
+                underlayColor='yellow'
             >
                 <Text>
                     {sumbitted ? 'Clear' : "Submit"}
                 </Text>
-            </TouchableOpacity>
+            </TouchableHighlight>
             {/* <Button
                 title={sumbitted ? 'Clear' : "Submit"}
                 onPress={onPressHandler}
