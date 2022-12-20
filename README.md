@@ -20,3 +20,5 @@ Designed the app logo in [Canva](https://www.canva.com/design/DAFTnGJjNoI/IWMC4W
 * Day 16 Practiced List, ScrollView & RefreshControl in a react native app.
 * Day 17 Practiced Flat list and Section List in a react native app.
 * Day 18 Exercised Section List and practiced Input text.
+* Day 19 Exercised Buttons, pressable and touch opacity.
+* Day 20 Solved HackerRank Plus Minus problem.
