@@ -22,3 +22,4 @@ Designed the app logo in [Canva](https://www.canva.com/design/DAFTnGJjNoI/IWMC4W
 * Day 18 Exercised Section List and practiced Input text.
 * Day 19 Exercised Buttons, pressable and touch opacity.
 * Day 20 Solved HackerRank Plus Minus problem.
+day 21 solve problem
