@@ -23,3 +23,5 @@ Designed the app logo in [Canva](https://www.canva.com/design/DAFTnGJjNoI/IWMC4W
 * Day 19 Exercised Buttons, pressable and touch opacity.
 * Day 20 Solved HackerRank Plus Minus problem.
 * Day 21 solved Hacker rank grading students
+* Day 22 solved Hacker rank camelCase
+* Day 23 solved Hacker rank breaking record.
