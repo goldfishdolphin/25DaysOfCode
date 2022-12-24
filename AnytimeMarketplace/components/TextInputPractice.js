@@ -1,12 +1,21 @@
 import React, { useState } from "react";
-import { Text, View, StyleSheet, SafeAreaView, TextInput, Button, Touchable, TouchableOpacity, TouchableHighlight, Pressable } from "react-native";
+import { Text, View, StyleSheet, SafeAreaView, TextInput, Button, Touchable, TouchableOpacity, TouchableHighlight, Pressable, Alert } from "react-native";
 import { TouchableWithoutFeedback } from "react-native-web";
 function TextInputPractice() {
 
     const [name, setName] = useState('');
     const [sumbitted, setSubmitted] = useState(false);
     const onPressHandler = () => {
-        setSubmitted(!sumbitted);
+        if (name.length > 3) {
+
+            setSubmitted(!sumbitted);
+        } else {
+            Alert.alert('Warning', 'The name must be more than three characters', [
+                { text: 'Cancel', onPress: () => console.warn('Cancel Pressed') },
+                { text: 'Do not show again', onPress: () => console.warn('Do not show Pressed') },
+                { text: 'OK', onPress: () => console.warn('Ok Pressed') },
+            ], { cancelable: true, onDismiss: () => console.warn('Altert dismissed') });
+        }
     };
 
     return (
