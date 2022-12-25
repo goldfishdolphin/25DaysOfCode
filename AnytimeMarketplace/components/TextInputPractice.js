@@ -1,25 +1,35 @@
 import React, { useState } from "react";
-import { Text, View, StyleSheet, SafeAreaView, TextInput, Button, Touchable, TouchableOpacity, TouchableHighlight, Pressable, Alert } from "react-native";
-import { TouchableWithoutFeedback } from "react-native-web";
+import { Text, View, StyleSheet, SafeAreaView, TextInput, Button, Touchable, TouchableOpacity, TouchableHighlight, Pressable, Alert, Modal } from "react-native";
 function TextInputPractice() {
 
     const [name, setName] = useState('');
     const [sumbitted, setSubmitted] = useState(false);
+    const [showWarning, setShowWarning] = useState(false);
     const onPressHandler = () => {
         if (name.length > 3) {
 
             setSubmitted(!sumbitted);
         } else {
-            Alert.alert('Warning', 'The name must be more than three characters', [
-                { text: 'Cancel', onPress: () => console.warn('Cancel Pressed') },
-                { text: 'Do not show again', onPress: () => console.warn('Do not show Pressed') },
-                { text: 'OK', onPress: () => console.warn('Ok Pressed') },
-            ], { cancelable: true, onDismiss: () => console.warn('Altert dismissed') });
+            setShowWarning(true);
+
         }
     };
 
     return (
-        <SafeAreaView style={styles.body}>
+        <View style={styles.body}>
+            <Modal visible={showWarning}
+                transparent
+                onRequestClose={() => setShowWarning(false)}
+            >
+                <View style={styles.warning_title}>
+                    <Text>Warning</Text>
+                </View>
+                <View style={styles.centered_view}>
+                    <View style={styles.warning_modal}>
+                        <Text> The name must be longer than 3 characters</Text>
+                    </View>
+                </View>
+            </Modal>
             <Text>Please enter your name:</Text>
             <TextInput
                 style={styles.input}
@@ -38,12 +48,13 @@ function TextInputPractice() {
 
             {sumbitted ?
                 <Text>Your name is {name}</Text> : null}
-        </SafeAreaView>
+        </View>
     );
 };
 
 const styles = StyleSheet.create({
     body: {
+
         alignItems: 'center'
     },
     input: {
@@ -62,6 +73,21 @@ const styles = StyleSheet.create({
         padding: 10,
         borderRadius: 8,
         backgroundColor: 'pink'
+    },
+    centered_view: {
+        alignItems: 'center',
+        flex: 1,
+        justifyContent: 'center',
+    },
+    warning_modal: {
+        backgroundColor: 'grey',
+        width: 300,
+        height: 300,
+        borderColor: 'orange',
+        borderWidth: 1,
+        borderRadius: 20,
+        backgroundColor: 'pink',
+
     }
 });
 
