@@ -21,12 +21,18 @@ function TextInputPractice() {
                 transparent
                 onRequestClose={() => setShowWarning(false)}
             >
-                <View style={styles.warning_title}>
-                    <Text>Warning</Text>
-                </View>
+
                 <View style={styles.centered_view}>
                     <View style={styles.warning_modal}>
-                        <Text> The name must be longer than 3 characters</Text>
+                        <View style={styles.warning_title}>
+                            <Text style={styles.title}>Warning! </Text>
+                        </View>
+                        <View >
+                            <Text> The name must be longer than 3 characters</Text>
+                        </View>
+                        <Pressable onPress={() => setShowWarning(false)}>
+                            <Text style={styles.ok_button}>OK</Text>
+                        </Pressable>
                     </View>
                 </View>
             </Modal>
@@ -39,7 +45,6 @@ function TextInputPractice() {
             <Pressable
                 onPress={onPressHandler}
                 style={styles.button}
-
             >
                 <Text>
                     {sumbitted ? 'Clear' : "Submit"}
@@ -81,6 +86,7 @@ const styles = StyleSheet.create({
     },
     warning_modal: {
         backgroundColor: 'grey',
+        alignContent: 'center',
         width: 300,
         height: 300,
         borderColor: 'orange',
@@ -88,6 +94,26 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         backgroundColor: 'pink',
 
+    },
+    warning_title: {
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20,
+        height: 50,
+        alignItems: 'center',
+        alignContent: 'center',
+        backgroundColor: 'purple',
+        justifyContent: 'center'
+    },
+    title: {
+        color: 'yellow',
+
+    },
+    ok_button: {
+        backgroundColor: 'green',
+        textAlign: "center",
+        padding: 5,
+        margin: 50,
+        borderRadius: 20,
     }
 });
 
