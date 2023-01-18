@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Text, View, StyleSheet, SafeAreaView, TextInput, Button, Touchable, TouchableOpacity, TouchableHighlight, Pressable, Alert, Modal } from "react-native";
+import { Text, View, StyleSheet, SafeAreaView, TextInput, Button, Touchable, TouchableOpacity, TouchableHighlight, Pressable, Alert, Modal, Image, ImageBackground } from "react-native";
 function TextInputPractice() {
 
     const [name, setName] = useState('');
@@ -16,7 +16,7 @@ function TextInputPractice() {
     };
 
     return (
-        <View style={styles.body}>
+        <ImageBackground style={styles.body} source={{ uri: 'https://img.freepik.com/free-vector/pink-watercolor-leaves-background_23-2148907681.jpg?w=2000&t=st=1674048801~exp=1674049401~hmac=f9c70ae69bc28e9a5c10f59eb836da7c8b43d577a81aa579087d17476b26bae3' }}>
             <Modal visible={showWarning}
                 transparent
                 onRequestClose={() => setShowWarning(false)}
@@ -52,15 +52,26 @@ function TextInputPractice() {
             </Pressable>
 
             {sumbitted ?
-                <Text>Your name is {name}</Text> : null}
-        </View>
+                <View style={styles.body}>
+                    <Text>Your name is {name}</Text><Image style={styles.image}
+                        source={require('../assets/done.png')}
+                        resizeMode='stretch'
+                    />
+                </View> :
+                <Image style={styles.image}
+                    source={require('../assets/error.png')}
+                    resizeMode='stretch'
+                    blurRadius={1}
+                />}
+        </ImageBackground>
     );
 };
 
 const styles = StyleSheet.create({
     body: {
 
-        alignItems: 'center'
+        alignItems: 'center',
+        flex: 1
     },
     input: {
         height: 40,
@@ -114,6 +125,11 @@ const styles = StyleSheet.create({
         padding: 5,
         margin: 50,
         borderRadius: 20,
+    },
+    image: {
+        width: 100,
+        height: 100,
+        margin: 10
     }
 });
 
